@@ -3,9 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="countIt.css">
+    <script src="GUI.js"></script>
+    <title>Count It</title>
 </head>
 <body>
-    
+    <header>
+        <h1>Count It!!!!</h1>
+        <h2>Hit the button to count the number of times each letter appears in the word, sentence or paragraph you input!!</h2>
+    </header>
+    <main>
+        <h2 id= "instructions">Type a word, sentence or paragraph.</h2>
+        <textarea type="text" name="word" id="word"></textarea>
+        <div id = "buttonWrapper">
+            <button id= "button" onclick = "countIt()">COUNT IT!!!!</button>
+        </div>
+        <div id= "result"></div>
+    </main>
 </body>
 </html>
