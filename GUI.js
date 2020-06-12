@@ -1,12 +1,12 @@
 const countIt = () =>{
     let word = document.getElementById("word").value;
-    word = word.toLowerCase().replace(/[\.\s]/g, '');
-    word = word.trim();
+    // word = word.toLowerCase().replace(/[\.\s]/g, '');
+    word = word.toLowerCase().match(/[a-z]/g).sort();
     let letterCount = {};
     //creat a count variable and set it to 0
     let count = 0;
     let maxChar = "";
-    word.split("").forEach(letter => {
+    word.forEach(letter => {
       
       if (letterCount[letter]){
         letterCount[letter]++;
@@ -27,4 +27,5 @@ const countIt = () =>{
     }
     let resultString = finalArray.join(" ");
     document.getElementById("result").innerHTML = resultString;
+    document.getElementById("word").value = "";
     }
