@@ -7,14 +7,11 @@
 // Use this challenge input: "The quick brown fox jumps over the lazy dog and the sleeping cat early in the day."
 // let input = "The quick brown fox jumps over the lazy dog and the sleeping cat early in the day.";
 let input = "The quick brown fox jumps over the lazy dog and the sleeping cat early in the day.";
-input = input.toLowerCase().replace(/[\.\s]/g, '');
+input = input.toLowerCase()..toLowerCase().match(/[a-z]/g).sort();
 const countIt = (word) =>{
-word = word.toLowerCase().trim();
 let letterCount = {};
 //creat a count variable and set it to 0
-let count = 0;
-let maxChar = "";
-word.split("").forEach(letter => {
+word.forEach(letter => {
   
   if (letterCount[letter]){
     letterCount[letter]++;

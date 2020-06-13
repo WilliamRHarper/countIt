@@ -4,8 +4,6 @@ const countIt = () =>{
     word = word.toLowerCase().match(/[a-z]/g).sort();
     let letterCount = {};
     //creat a count variable and set it to 0
-    let count = 0;
-    let maxChar = "";
     word.forEach(letter => {
       
       if (letterCount[letter]){
