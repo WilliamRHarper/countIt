@@ -12,18 +12,22 @@ const countIt = () =>{
         letterCount[letter] = 1;
       }
     })
-    let infoArray = Object.entries(letterCount);
-    let resultArray = [];
-    for (let i = 0; i < infoArray.length; i++){
-      infoArray[i][0] = infoArray[i][0] + ':';
-      resultArray.push(infoArray[i]);
-    }
-    let finalArray = [];
-    for (let j = 0; j < resultArray.length; j++){
-     finalArray.push(resultArray[j].join(""));
+    // let infoArray = Object.entries(letterCount);
+    // let resultArray = [];
+    // for (let i = 0; i < infoArray.length; i++){
+    //   infoArray[i][0] = infoArray[i][0] + ':';
+    //   resultArray.push(infoArray[i]);
+    // }
+    // let finalArray = [];
+    // for (let j = 0; j < resultArray.length; j++){
+    //  finalArray.push(resultArray[j].join(""));
     
+    // }
+     resultString = '';
+     for (let key in letterCount){
+     resultString += key + ':' + letterCount[key] + ' ';
     }
-    let resultString = finalArray.join(" ");
+    // let resultString = finalArray.join(" ");
     document.getElementById("result").innerHTML = resultString;
     document.getElementById("word").value = "";
     }

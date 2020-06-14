@@ -7,7 +7,7 @@
 // Use this challenge input: "The quick brown fox jumps over the lazy dog and the sleeping cat early in the day."
 // let input = "The quick brown fox jumps over the lazy dog and the sleeping cat early in the day.";
 let input = "The quick brown fox jumps over the lazy dog and the sleeping cat early in the day.";
-input = input.toLowerCase()..toLowerCase().match(/[a-z]/g).sort();
+input = input.toLowerCase().match(/[a-z]/g).sort();
 const countIt = (word) =>{
 let letterCount = {};
 //creat a count variable and set it to 0
@@ -19,17 +19,21 @@ word.forEach(letter => {
     letterCount[letter] = 1;
   }
 })
-let infoArray = Object.entries(letterCount);
-let resultArray = [];
-for (let i = 0; i < infoArray.length; i++){
-  infoArray[i][0] = infoArray[i][0] + ':';
-  resultArray.push(infoArray[i]);
-}
-let finalArray = [];
-for (let j = 0; j < resultArray.length; j++){
- finalArray.push(resultArray[j].join(""));
+// let infoArray = Object.entries(letterCount);
+// let resultArray = [];
+// for (let i = 0; i < infoArray.length; i++){
+//   infoArray[i][0] = infoArray[i][0] + ':';
+//   resultArray.push(infoArray[i]);
+// }
+// let finalArray = [];
+// for (let j = 0; j < resultArray.length; j++){
+//  finalArray.push(resultArray[j].join(""));
 
+// }
+resultString = '';
+for (let key in letterCount){
+resultString += key + ':' + letterCount[key] + ' ';
 }
-let resultString = finalArray.join(" ");
+// let resultString = finalArray.join(" ");
 return resultString;
 }
